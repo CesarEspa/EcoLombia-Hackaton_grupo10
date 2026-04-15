@@ -22,6 +22,7 @@
     
     <!-- Estilos específicos  -->
     <link rel="stylesheet" href="assets/css/app.css">
+
 </head>
 
 <body>
@@ -38,13 +39,19 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">
+                                <i class="bi bi-house-door me-1"></i>Inicio
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Destinos</a>
+                            <a class="nav-link" href="#lugares__container">
+                                <i class="bi bi-geo-alt me-1"></i>Destinos
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Reseñas</a>
+                            <a class="nav-link" href="#resenas__container">
+                                <i class="bi bi-star me-1"></i>Reseñas
+                            </a>
                         </li>
                     </ul>
                     <span class="navbar-text">
@@ -58,9 +65,114 @@
     <main>
 
         <!-- hero -->
-<section class="hero__container">
+        <section class="container-fluid p-0">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+                </div>
 
-    <div class="booking-bar-horizontal">
+                <!-- Slides -->
+                <div class="carousel-inner">
+                    
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="position-relative w-100 ratio ratio-4x3 ratio-md-16x9 hero-slide">
+                            <img src="assets/img/cano-cristiales.jpg" 
+                                class="d-block w-100 h-100 object-fit-cover position-absolute top-0 start-0" 
+                                alt="Caño Cristales">
+
+                            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center px-3 hero-overlay">
+                                
+                                <div class="p-3 p-md-4 rounded hero-content">
+                                    <h5 class="fw-bold text-white text-uppercase display-6 display-md-3 mb-2">
+                                        Caño Cristales
+                                    </h5>
+
+                                    <p class="text-white d-none d-md-block fs-5 mb-3">
+                                        Descubre el río de los cinco colores en la Sierra de la Macarena.
+                                    </p>
+
+                                    <div class="mt-2">
+                                        <a href="#lugares__container" class="btn btn-lg px-4 text-white hero-btn">
+                                            Explorar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="position-relative w-100 ratio ratio-4x3 ratio-md-16x9 hero-slide">
+                            <img src="assets/img/guatape.jpg" 
+                                class="d-block w-100 h-100 object-fit-cover position-absolute top-0 start-0" 
+                                alt="Guatapé">
+
+                            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center px-3 hero-overlay">
+                                
+                                <div class="p-3 p-md-4 rounded hero-content">
+                                    <h5 class="fw-bold text-white text-uppercase display-6 display-md-3 mb-2">
+                                        Guatapé
+                                    </h5>
+
+                                    <p class="text-white d-none d-md-block fs-5 mb-3">
+                                        Sube la Piedra del Peñol y admira el embalse más colorido de Colombia.
+                                    </p>
+
+                                    <div class="mt-2">
+                                        <a href="#lugares__container" class="btn btn-lg px-4 text-white hero-btn">
+                                            Descubrir
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="position-relative w-100 ratio ratio-4x3 ratio-md-16x9 hero-slide">
+                            <img src="assets/img/tatacoa.png" 
+                                class="d-block w-100 h-100 object-fit-cover position-absolute top-0 start-0" 
+                                alt="Desierto de la Tatacoa">
+
+                            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center px-3 hero-overlay">
+                                
+                                <div class="p-3 p-md-4 rounded hero-content">
+                                    <h5 class="fw-bold text-white text-uppercase display-6 display-md-3 mb-2">
+                                        Desierto de la Tatacoa
+                                    </h5>
+
+                                    <p class="text-white d-none d-md-block fs-5 mb-3">
+                                        Explora el paisaje desértico de colores ocres y grises en Huila.
+                                    </p>
+
+                                    <div class="mt-2">
+                                        <a href="#lugares__container" class="btn btn-lg px-4 text-white hero-btn">
+                                            Descubrir
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div> 
+        </section>
 
         <div class="booking-item">
             <label>Destino</label>
@@ -91,8 +203,123 @@
        
 
         <!-- lugares container -->
-        <section class="lugares__container">
+        <section id="lugares__container" class="lugares__container">
 
+        </section>
+
+        <!-- reseñas container -->
+        <section id="resenas__container" class="resenas__container py-5 bg-neutral">
+            <div class="container">
+                
+                <!-- Título -->
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold text-uppercase display-5 mb-3 text-primary">
+                        Reseñas de Viajeros
+                    </h2>
+                    <p class="lead">
+                        Lo que dicen nuestros exploradores sobre Ecolombia
+                    </p>
+                </div>
+
+                <!-- Grid de reseñas -->
+                <div class="row g-4">
+                    
+                    <!-- Reseña 1 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm bg-primary-light">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center me-3 bg-primary avatar-circle">
+                                        <i class="bi bi-person-fill text-white fs-3"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="card-title mb-0 fw-bold text-primary">María González</h5>
+                                        <small class="text-secondary">
+                                            <i class="bi bi-geo-alt-fill"></i> Caño Cristales
+                                        </small>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3 text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                
+                                <p class="card-text fst-italic">
+                                    "Una experiencia inolvidable. El río de los cinco colores superó todas mis expectativas. El guía fue excelente."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reseña 2 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm bg-primary-light">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center me-3 bg-primary avatar-circle">
+                                        <i class="bi bi-person-fill text-white fs-3"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="card-title mb-0 fw-bold text-primary">Carlos Ruiz</h5>
+                                        <small class="text-secondary">
+                                            <i class="bi bi-geo-alt-fill"></i> Guatapé
+                                        </small>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3 text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                                
+                                <p class="card-text fst-italic">
+                                    "La subida a la Piedra del Peñol es exigente pero la vista vale cada paso. El pueblo es encantador."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reseña 3 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm bg-primary-light">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center me-3 bg-primary avatar-circle">
+                                        <i class="bi bi-person-fill text-white fs-3"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="card-title mb-0 fw-bold text-primary">Ana Martínez</h5>
+                                        <small class="text-secondary">
+                                            <i class="bi bi-geo-alt-fill"></i> Desierto de la Tatacoa
+                                        </small>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3 text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                
+                                <p class="card-text fst-italic">
+                                    "Parece otro planeta. La observación de estrellas fue mágica. Totalmente recomendado para desconectarse."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
         </section>
 
         <section class="checkout__container">
@@ -107,7 +334,7 @@
                     <h2 class="logo">Ecolombia</h2>
 
                     <p class="footer-text">
-                        Descubre la magia de 
+                        Descubre la magia de
                         nuestra tierra querida
                     </p>
 
