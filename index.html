@@ -19,7 +19,7 @@
         rel="stylesheet">
     <!-- Estilos genéricos -->
     <link rel="stylesheet" href="assets/css/reset.css">
-    
+
     <!-- Estilos específicos  -->
     <link rel="stylesheet" href="assets/css/app.css">
 
@@ -62,31 +62,34 @@
             </div>
         </nav>
     </section>
+
     <main>
 
         <!-- hero -->
         <section class="container-fluid p-0">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                
+
                 <!-- Indicadores -->
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                        class="active"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
                 </div>
 
                 <!-- Slides -->
                 <div class="carousel-inner">
-                    
+
                     <!-- Slide 1 -->
                     <div class="carousel-item active">
                         <div class="position-relative w-100 ratio ratio-4x3 ratio-md-16x9 hero-slide">
-                            <img src="assets/img/cano-cristiales.jpg" 
-                                class="d-block w-100 h-100 object-fit-cover position-absolute top-0 start-0" 
+                            <img src="assets/img/cano-cristiales.jpg"
+                                class="d-block w-100 h-100 object-fit-cover position-absolute top-0 start-0"
                                 alt="Caño Cristales">
 
-                            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center px-3 hero-overlay">
-                                
+                            <div
+                                class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center px-3 hero-overlay">
+
                                 <div class="p-3 p-md-4 rounded hero-content">
                                     <h5 class="fw-bold text-white text-uppercase display-6 display-md-3 mb-2">
                                         Caño Cristales
@@ -109,12 +112,13 @@
                     <!-- Slide 2 -->
                     <div class="carousel-item">
                         <div class="position-relative w-100 ratio ratio-4x3 ratio-md-16x9 hero-slide">
-                            <img src="assets/img/guatape.jpg" 
-                                class="d-block w-100 h-100 object-fit-cover position-absolute top-0 start-0" 
+                            <img src="assets/img/guatape.jpg"
+                                class="d-block w-100 h-100 object-fit-cover position-absolute top-0 start-0"
                                 alt="Guatapé">
 
-                            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center px-3 hero-overlay">
-                                
+                            <div
+                                class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center px-3 hero-overlay">
+
                                 <div class="p-3 p-md-4 rounded hero-content">
                                     <h5 class="fw-bold text-white text-uppercase display-6 display-md-3 mb-2">
                                         Guatapé
@@ -137,12 +141,13 @@
                     <!-- Slide 3 -->
                     <div class="carousel-item">
                         <div class="position-relative w-100 ratio ratio-4x3 ratio-md-16x9 hero-slide">
-                            <img src="assets/img/tatacoa.png" 
-                                class="d-block w-100 h-100 object-fit-cover position-absolute top-0 start-0" 
+                            <img src="assets/img/tatacoa.png"
+                                class="d-block w-100 h-100 object-fit-cover position-absolute top-0 start-0"
                                 alt="Desierto de la Tatacoa">
 
-                            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center px-3 hero-overlay">
-                                
+                            <div
+                                class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center px-3 hero-overlay">
+
                                 <div class="p-3 p-md-4 rounded hero-content">
                                     <h5 class="fw-bold text-white text-uppercase display-6 display-md-3 mb-2">
                                         Desierto de la Tatacoa
@@ -164,43 +169,49 @@
                 </div>
 
                 <!-- Controles -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                 </button>
 
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </button>
-            </div> 
+            </div>
         </section>
 
-        <div class="booking-item">
-            <label>Destino</label>
-            <select id="destinoSelect" class="form-select">
-                <option value="">¿A dónde quieres ir?</option>
-            </select>
+        <div class="container">
+            <!-- hero -->
+            <section>
+                  <div class="booking-bar-horizontal">
+                        <div class="booking-item">
+                              <label>Destino</label>
+                              <select id="destinoSelect" class="form-select">
+                                    <option value="">¿A dónde quieres ir?</option>
+                                  </select>
+                            </div>
+                        <div class="booking-item">
+                              <label>Check-in</label>
+                              <input type="date" class="form-control">
+                            </div>
+                        <div class="booking-item">
+                              <label>Check-out</label>
+                              <input type="date" class="form-control">
+                            </div>
+                        <div class="booking-item d-flex align-items-center">
+                              <button class="btn btn-success w-100" id="badge">
+                                    Buscar
+                                  </button>
+                            </div>
+                      </div>
+            </section>
         </div>
 
-        <div class="booking-item">
-            <label>Check-in</label>
-            <input type="date" class="form-control">
-        </div>
+        
 
-        <div class="booking-item">
-            <label>Check-out</label>
-            <input type="date" class="form-control">
-        </div>
 
-        <div class="booking-item d-flex align-items-end">
-            <button class="btn btn-success w-100" id="badge">
-                Añadir al carrito
-            </button>
-        </div>
 
-    </div>
-
-</section>
-       
 
         <!-- lugares container -->
         <section id="lugares__container" class="lugares__container">
@@ -210,7 +221,7 @@
         <!-- reseñas container -->
         <section id="resenas__container" class="resenas__container py-5 bg-neutral">
             <div class="container">
-                
+
                 <!-- Título -->
                 <div class="text-center mb-5">
                     <h2 class="fw-bold text-uppercase display-5 mb-3 text-primary">
@@ -223,13 +234,14 @@
 
                 <!-- Grid de reseñas -->
                 <div class="row g-4">
-                    
+
                     <!-- Reseña 1 -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm bg-primary-light">
                             <div class="card-body p-4">
                                 <div class="d-flex align-items-center mb-3">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center me-3 bg-primary avatar-circle">
+                                    <div
+                                        class="rounded-circle d-flex align-items-center justify-content-center me-3 bg-primary avatar-circle">
                                         <i class="bi bi-person-fill text-white fs-3"></i>
                                     </div>
                                     <div>
@@ -239,7 +251,7 @@
                                         </small>
                                     </div>
                                 </div>
-                                
+
                                 <div class="mb-3 text-warning">
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
@@ -247,9 +259,10 @@
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                 </div>
-                                
+
                                 <p class="card-text fst-italic">
-                                    "Una experiencia inolvidable. El río de los cinco colores superó todas mis expectativas. El guía fue excelente."
+                                    "Una experiencia inolvidable. El río de los cinco colores superó todas mis
+                                    expectativas. El guía fue excelente."
                                 </p>
                             </div>
                         </div>
@@ -260,7 +273,8 @@
                         <div class="card h-100 border-0 shadow-sm bg-primary-light">
                             <div class="card-body p-4">
                                 <div class="d-flex align-items-center mb-3">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center me-3 bg-primary avatar-circle">
+                                    <div
+                                        class="rounded-circle d-flex align-items-center justify-content-center me-3 bg-primary avatar-circle">
                                         <i class="bi bi-person-fill text-white fs-3"></i>
                                     </div>
                                     <div>
@@ -270,7 +284,7 @@
                                         </small>
                                     </div>
                                 </div>
-                                
+
                                 <div class="mb-3 text-warning">
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
@@ -278,9 +292,10 @@
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-half"></i>
                                 </div>
-                                
+
                                 <p class="card-text fst-italic">
-                                    "La subida a la Piedra del Peñol es exigente pero la vista vale cada paso. El pueblo es encantador."
+                                    "La subida a la Piedra del Peñol es exigente pero la vista vale cada paso. El pueblo
+                                    es encantador."
                                 </p>
                             </div>
                         </div>
@@ -291,7 +306,8 @@
                         <div class="card h-100 border-0 shadow-sm bg-primary-light">
                             <div class="card-body p-4">
                                 <div class="d-flex align-items-center mb-3">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center me-3 bg-primary avatar-circle">
+                                    <div
+                                        class="rounded-circle d-flex align-items-center justify-content-center me-3 bg-primary avatar-circle">
                                         <i class="bi bi-person-fill text-white fs-3"></i>
                                     </div>
                                     <div>
@@ -301,7 +317,7 @@
                                         </small>
                                     </div>
                                 </div>
-                                
+
                                 <div class="mb-3 text-warning">
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
@@ -309,9 +325,10 @@
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                 </div>
-                                
+
                                 <p class="card-text fst-italic">
-                                    "Parece otro planeta. La observación de estrellas fue mágica. Totalmente recomendado para desconectarse."
+                                    "Parece otro planeta. La observación de estrellas fue mágica. Totalmente recomendado
+                                    para desconectarse."
                                 </p>
                             </div>
                         </div>
