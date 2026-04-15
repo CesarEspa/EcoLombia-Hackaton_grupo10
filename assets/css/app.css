@@ -83,3 +83,68 @@ body {
 main {
   flex: 1;
 }
+
+
+.lugares__container {
+    background-color: white;
+}
+
+.ecotour-card {
+    background-color: var(--color-primary-dark); 
+    border: none;
+    border-radius: 20px; 
+    padding: 15px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.ecotour-card img {
+    border-radius: 10px; 
+    height: 220px;
+    object-fit: cover; 
+    width: 100%;
+}
+
+.ecotour-card .card-body {
+    background-color: var(--color-bg); /* Fondo en contraste dentro de la card */
+    border-radius: 10px;
+    margin-top: 15px;
+    color: var(--color-text);
+}
+
+.ecotour-card .card-title {
+    color: var(--color-text);
+}
+
+.eco-text-muted {
+    color: black;
+}
+
+
+.ecotour-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(105, 114, 84, 0.4) !important; 
+    z-index: 1;
+}
+
+.btn-eco-primary {
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+}
+
+.btn-eco-primary:hover {
+    background-color: var(--color-secondary-light);
+    color: white;
+}
+
+.btn-eco-secondary {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    border: none;
+    font-weight: 600;
+}
+
+.btn-eco-secondary:hover {
+    background-color: var(--color-primary-dark);
+    color: white;
+}
