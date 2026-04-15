@@ -69,13 +69,13 @@ function eliminarItem(id) {
 //funcion para disminuir cantidad de items en el carrito
 
 function disminuirCantidad(id) {
-    const producto = producto.find(item => item.id === id);
+    const producto = carrito.find(item => item.id === id);
 
     if (producto) {
         producto.cantidad--;
 
         if (producto.cantidad <= 0) {
-            eliminarItem(id);
+            eliminarDelCarrito(id);
         } else {
             actualizarBadge();
             guardarCarrito();
