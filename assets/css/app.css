@@ -82,6 +82,41 @@ body {
 main {
     flex: 1;
 }
+.hero-slide {
+    max-height: 550px;
+}
+
+.hero-overlay {
+    background-color: rgba(1, 1, 1, 0.4);
+}
+
+
+.hero-btn {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.hero-btn:hover {
+    background-color: var(--color-secondary-light);
+    border-color: var(--color-secondary-light);
+}
+
+.btn-outline-success {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-outline-success:hover {
+    color: var(--color-neutral);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-outline-success:active {
+    color: var(--color-neutral) !important;
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+}
 /*Sidebar para carrito*/
 .sidebar {
   position: fixed;
