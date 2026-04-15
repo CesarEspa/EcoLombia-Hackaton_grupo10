@@ -140,6 +140,12 @@ main {
 .sidebar-footer {
   padding: 1rem;
   border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar-header h5{
+  margin: 0;
 }
 
 .sidebar-body {
@@ -258,6 +264,39 @@ main {
     border-radius: 8px;
 }
 
+.cart-item {
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item:hover {
+  background: #f9f9f9;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+/* botones estilo moderno */
+.cart-item button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.btn-close-minimal {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: #666;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-close-minimal:hover {
+  color: #000;
+  transform: rotate(90deg);
+}
+
+
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .booking-bar-horizontal {
@@ -320,3 +359,4 @@ main {
     background-color: var(--color-primary-dark);
     color: white;
 }
+

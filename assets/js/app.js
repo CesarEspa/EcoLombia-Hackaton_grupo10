@@ -110,11 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const id = e.target.value;
 
     const destinoSeleccionado = DESTINOS.find(d => d.id == id);
-
-    console.log("Seleccionado:", destinoSeleccionado);
-
-    // prueba visual rápida
-    alert(`Seleccionaste: ${destinoSeleccionado.nombre}`);
   });
 
 });

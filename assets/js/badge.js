@@ -47,7 +47,7 @@ function cargarCarrito() {
 }
 cargarCarrito();
 
-//testing basico funcionalidad añadir
+
 //añadimos funcion para abrir modal con contenido del carrito.
 botonCarrito.addEventListener("click", () => {
     renderCarrito();
@@ -84,6 +84,7 @@ function disminuirCantidad(id) {
 }
 window.disminuirCantidad = disminuirCantidad;
 
+//funcion para dar formato a moneda local
 function formatearPrecio(valor) {
     return `$${valor.toLocaleString('es-CO')}`;
 }
@@ -98,23 +99,50 @@ function renderCarrito() {
         return;
     }
 
+    //rendreizamos el carrito dentro del contenedor
     contenedor.innerHTML = carrito.map(item => `
-        <div class="card mb-2 p-2">
-            <h5>${item.nombre}</h5>
-            <p>Precio: ${formatearPrecio(item.precio)}</p>
-            <p>Cantidad: ${item.cantidad}</p>
+          <div class="cart-item d-flex align-items-center justify-content-between mb-3 p-2">
 
-            <button onclick="disminuirCantidad(${item.id})" class="btn btn-warning btn-sm">-</button>
-            <button onclick="eliminarItem(${item.id})" class="btn btn-danger btn-sm">Eliminar</button>
+        <div class="flex-grow-1">
+            <h6 class="mb-1 fw-bold">${item.nombre}</h6>
+            <small class="text-muted">${formatearPrecio(item.precio)} x ${item.cantidad}</small>
         </div>
-    `).join("");
+
+        <div class="d-flex align-items-center gap-2">
+
+            <button onclick="disminuirCantidad(${item.id})" 
+                class="btn btn-sm btn-light border">
+                ➖
+            </button>
+
+            <span class="fw-bold">${item.cantidad}</span>
+
+            <button onclick="addtoCart(${JSON.stringify(item).replace(/"/g, '&quot;')})" 
+                class="btn btn-sm btn-light border">
+                ➕
+            </button>
+
+            <button onclick="eliminarItem(${item.id})" 
+                class="btn btn-sm btn-danger">
+                ✕
+            </button>
+
+        </div>
+    </div>
+      `).join("");
 
     const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
-    totalContainer.textContent = `Total: ${formatearPrecio(total)}`
+    totalContainer.innerHTML = `
+    <div class="d-flex justify-content-between align-items-center">
+        <span class="fw-bold">Total</span>
+        <span class="fs-5 text-success fw-bold">
+            ${formatearPrecio(total)}
+        </span>
+    </div>  `;
 }
 
 //abrimos y cerramos badge con sidebar
-function abrirCarrito(){
+function abrirCarrito() {
     sidebar.classList.add("open");
     overlay.classList.add("show");
     renderCarrito();
@@ -125,6 +153,6 @@ function cerrarCarrito() {
     sidebar.classList.remove("open");
     overlay.classList.remove("show")
 }
-
+//añadimos escuchas al DOM
 botonCarrito.addEventListener("click", abrirCarrito);
 cerrarBtn.addEventListener("click", cerrarCarrito);
