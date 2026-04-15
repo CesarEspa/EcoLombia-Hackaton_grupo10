@@ -9,7 +9,7 @@ const DESTINOS = [
     nombre: "Cañón del Río Claro",
     ubicacion: "Antioquia",
     precio: 180000,
-    imagen: "https://source.unsplash.com/800x600/?river,canyon,jungle",
+    imagen: "assets/img/cano-cristiales.jpg",
     descripcion: "Reserva natural perfecta para rafting y exploración."
   },
   {
@@ -83,134 +83,6 @@ const DESTINOS = [
     precio: 120000,
     imagen: "https://source.unsplash.com/800x600/?forest,park,trail",
     descripcion: "Naturaleza cerca de Medellín."
-  },
-  {
-    id: 11,
-    nombre: "Cañón del Chicamocha",
-    ubicacion: "Santander",
-    precio: 280000,
-    imagen: "https://source.unsplash.com/800x600/?canyon,landscape",
-    descripcion: "Uno de los cañones más grandes del mundo."
-  },
-  {
-    id: 12,
-    nombre: "PNN Ensenada de Utría",
-    ubicacion: "Chocó",
-    precio: 420000,
-    imagen: "https://source.unsplash.com/800x600/?whales,ocean",
-    descripcion: "Ballenas, selva y playas vírgenes."
-  },
-  {
-    id: 13,
-    nombre: "Bahía Solano",
-    ubicacion: "Chocó",
-    precio: 380000,
-    imagen: "https://source.unsplash.com/800x600/?beach,jungle",
-    descripcion: "Destino ideal para ecoturismo."
-  },
-  {
-    id: 14,
-    nombre: "Isla Gorgona",
-    ubicacion: "Cauca",
-    precio: 600000,
-    imagen: "https://source.unsplash.com/800x600/?island,jungle",
-    descripcion: "Isla con historia y biodiversidad única."
-  },
-  {
-    id: 15,
-    nombre: "Nuquí",
-    ubicacion: "Chocó",
-    precio: 550000,
-    imagen: "https://source.unsplash.com/800x600/?eco,beach,forest",
-    descripcion: "Relajación, selva y mar."
-  },
-  {
-    id: 16,
-    nombre: "Reserva Natural El Almejal",
-    ubicacion: "Chocó",
-    precio: 320000,
-    imagen: "https://source.unsplash.com/800x600/?eco,lodge,jungle",
-    descripcion: "Ecolodge rodeado de naturaleza."
-  },
-  {
-    id: 17,
-    nombre: "Caño Cristales",
-    ubicacion: "Meta",
-    precio: 700000,
-    imagen: "https://source.unsplash.com/800x600/?colorful,river",
-    descripcion: "El río de los cinco colores."
-  },
-  {
-    id: 18,
-    nombre: "PNN El Tuparro",
-    ubicacion: "Vichada",
-    precio: 650000,
-    imagen: "https://source.unsplash.com/800x600/?savanna,river",
-    descripcion: "Naturaleza salvaje y poco explorada."
-  },
-  {
-    id: 19,
-    nombre: "Hato La Aurora",
-    ubicacion: "Casanare",
-    precio: 480000,
-    imagen: "https://source.unsplash.com/800x600/?wildlife,safari",
-    descripcion: "Safari llanero con fauna silvestre."
-  },
-  {
-    id: 20,
-    nombre: "Bioparque Los Ocarros",
-    ubicacion: "Meta",
-    precio: 90000,
-    imagen: "https://source.unsplash.com/800x600/?animals,zoo",
-    descripcion: "Fauna típica de los llanos orientales."
-  },
-  {
-    id: 21,
-    nombre: "Parque Merecure",
-    ubicacion: "Casanare",
-    precio: 260000,
-    imagen: "https://source.unsplash.com/800x600/?adventure,park",
-    descripcion: "Aventura extrema en los llanos."
-  },
-  {
-    id: 22,
-    nombre: "PNN Chiribiquete",
-    ubicacion: "Amazonas",
-    precio: 800000,
-    imagen: "https://source.unsplash.com/800x600/?amazon,jungle",
-    descripcion: "Patrimonio natural y cultural de la humanidad."
-  },
-  {
-    id: 23,
-    nombre: "Reserva Tanimboca",
-    ubicacion: "Amazonas",
-    precio: 300000,
-    imagen: "https://source.unsplash.com/800x600/?amazon,canopy",
-    descripcion: "Experiencia en la selva amazónica."
-  },
-  {
-    id: 24,
-    nombre: "Puerto Nariño",
-    ubicacion: "Amazonas",
-    precio: 350000,
-    imagen: "https://source.unsplash.com/800x600/?river,village",
-    descripcion: "Pueblo ecológico sin carros."
-  },
-  {
-    id: 25,
-    nombre: "Isla de los Micos",
-    ubicacion: "Amazonas",
-    precio: 200000,
-    imagen: "https://source.unsplash.com/800x600/?monkeys,jungle",
-    descripcion: "Interacción con monos en libertad."
-  },
-  {
-    id: 26,
-    nombre: "Lagos de Tarapoto",
-    ubicacion: "Amazonas",
-    precio: 270000,
-    imagen: "https://source.unsplash.com/800x600/?pink,dolphin,river",
-    descripcion: "Avistamiento de delfines rosados."
   }
 ];
 
@@ -241,9 +113,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("Seleccionado:", destinoSeleccionado);
 
-    // 👇 prueba visual rápida
+    // prueba visual rápida
     alert(`Seleccionaste: ${destinoSeleccionado.nombre}`);
   });
 
 });
 
+function renderDestinos() {
+    const container = document.querySelector("#cards-container");
+
+    container.innerHTML = DESTINOS.map(destino => `
+        <div class="col">
+            <div class="card ecotour-card text-center shadow h-100">
+                
+                <img class="card-img-top" src="${destino.imagen}" alt="${destino.nombre}">
+                
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">${destino.nombre}</h5>
+                    <h6 class="card-subtitle mb-2 eco-text-muted">${destino.ubicacion}</h6>
+
+                    <p class="card-text eco-text-muted small px-2 flex-grow-1">
+                        ${destino.descripcion}
+                    </p>
+
+                    <p class="fw-bold text-success">$${destino.precio}</p>
+
+                    <div class="mb-3 mt-auto">
+                        <button class="btn btn-eco-primary btn-sm">Ver Plan</button>
+                        <button 
+                            class="btn btn-eco-secondary btn-sm"
+                            onclick="agregarDestino(${destino.id})"
+                        >
+                            Reservar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `).join("");
+}
+renderDestinos();
+
+// function agregarDestinos() {
+//     const destino = DESTINOS.find(d => d.id === id);
+//     if(!destino) return;
+
+//     addtoCart(destino);
+// }
+// //agregamos la funcion al scope.
+// window.agregarDestinos = agregarDestinos;
+
+// //init
