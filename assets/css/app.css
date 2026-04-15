@@ -1,30 +1,85 @@
 * {
   font-family: 'Montserrat', Arial, sans-serif;
 }
+
 :root {
-/* Verdes base */
---color-primary: #697254;   
---color-primary-light: #EBDDCD;
---color-primary-dark: #8C916C;
+  /* Verdes base */
+  --color-primary: #697254;
+  --color-primary-light: #EBDDCD;
+  --color-primary-dark: #8C916C;
 
-/* Tonos tierra */
---color-secondary: #92735C;
---color-secondary-light: #B69C85;
+  /* Tonos tierra */
+  --color-secondary: #92735C;
+  --color-secondary-light: #B69C85;
 
-/* tonos neutros */
---color-neutral: #DBD0C4;
+  /* tonos neutros */
+  --color-neutral: #DBD0C4;
 
-/* ===== Extra (opcional para UI states) ===== */
---color-bg: #DBD0C4;
---color-text: #2c2c2c;
+  /* ===== Extra (opcional para UI states) ===== */
+  --color-bg: #DBD0C4;
+  --color-text: #2c2c2c;
 
-/* Alerts */
---error: #FF3B3B;
---warning: #FFCC00;
---info: #0063F7;
---success: #06C270;
+  /* Alerts */
+  --error: #FF3B3B;
+  --warning: #FFCC00;
+  --info: #0063F7;
+  --success: #06C270;
 }
 
-.bg-body-tertiary{
-    background-color: var(--color-primary-light) !important;
+.bg-body-tertiary {
+  background-color: var(--color-primary-light) !important;
+}
+
+.footer-container {
+  align-self: end;
+  width: 100%;
+  height: 10%;
+  background-color: #997373;
+}
+
+  .footer-clean {
+    background-color: #EBDDCD;
+    color: #555;
+  }
+
+  .logo {
+    font-family: cursive;
+    font-size: 2rem;
+    color: #2f4f4f;
+  }
+
+  .footer-social {
+    display: flex;
+
+    /* background-color: red; */
+    .bi {
+      font-size: 1.5rem;
+      color: #555;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+  }
+
+
+  .footer-text {
+    font-size: 0.9rem;
+    margin: 15px 0;
+  }
+
+
+  .footer-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
