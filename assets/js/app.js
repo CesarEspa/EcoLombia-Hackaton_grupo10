@@ -1,4 +1,20 @@
- AOS.init();
+AOS.init();
+const btnBuscar = document.querySelector('#btnBuscar');
+const selectDestino = document.querySelector('#destinoSelect');
+
+// Evento click del botón Buscar
+btnBuscar.addEventListener('click', () => {
+    const idSeleccionado = selectDestino.value;
+    
+    // Validar que haya seleccionado un destino
+    if (!idSeleccionado) {
+        renderDestinos();
+        return;
+    }
+    
+    // Filtrar y renderizar solo ese destino
+    filtrarDestinos(Number(idSeleccionado));
+});
 
 // datos de destinos
 const DESTINOS = [
@@ -84,6 +100,21 @@ const DESTINOS = [
   }
 ];
 
+function filtrarDestinos(id) {
+    const destinoFiltrado = DESTINOS.find(d => d.id === id);
+    
+    // Si no encuentra el destino, mostrar todos
+    if (!destinoFiltrado) {
+        renderDestinos();
+        return;
+    }
+    
+    // Renderizar solo el destino seleccionado (como array de 1 elemento)
+    renderDestinos([destinoFiltrado]);
+}
+
+
+
 // esperamos el dom y añadimos select label para destinos
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -113,10 +144,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-function renderDestinos() {
+function renderDestinos(destinosMostrar = DESTINOS) {
     const container = document.querySelector("#cards-container");
+    
+    // Si no hay container, salir
+    if (!container) return;
 
-    container.innerHTML = DESTINOS.map(destino => `
+    container.innerHTML = destinosMostrar.map(destino => `
         <div class="col" data-aos="fade-up">
             <div class="card ecotour-card text-center shadow h-100">
                 
@@ -145,15 +179,18 @@ function renderDestinos() {
             </div>
         </div>
     `).join("");
+    
+    // Refrescar AOS para las nuevas cards
+    AOS.refresh();
 }
+
 renderDestinos();
 
- function agregarDestinos(id) {
-     const destino = DESTINOS.find(d => d.id === id);
-     if(!destino) return;
-
-     addtoCart(destino);
- }
+function agregarDestinos(id) {
+    const destino = DESTINOS.find(d => d.id === id);
+    if (!destino) return;
+    addtoCart(destino);
+}
 //agregamos la funcion al scope.
  window.agregarDestinos = agregarDestinos;
 
