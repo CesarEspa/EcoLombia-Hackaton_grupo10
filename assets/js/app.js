@@ -1,6 +1,4 @@
-function navbar () {
-    
-}
+ AOS.init();
 
 // datos de destinos
 const DESTINOS = [
