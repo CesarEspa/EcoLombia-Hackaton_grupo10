@@ -139,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const id = e.target.value;
 
     const destinoSeleccionado = DESTINOS.find(d => d.id == id);
-   
   });
 
 });
