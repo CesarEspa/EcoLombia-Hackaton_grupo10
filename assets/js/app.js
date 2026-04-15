@@ -6,10 +6,10 @@ function navbar () {
 const DESTINOS = [
   {
     id: 1,
-    nombre: "Cañón del Río Claro",
-    ubicacion: "Antioquia",
+    nombre: "Cañón Cristales",
+    ubicacion: "Meta",
     precio: 180000,
-    imagen: "assets/img/cano-cristiales.jpg",
+    imagen: "assets/img/cristales.png",
     descripcion: "Reserva natural perfecta para rafting y exploración."
   },
   {
@@ -17,7 +17,7 @@ const DESTINOS = [
     nombre: "PNN Tayrona",
     ubicacion: "Magdalena",
     precio: 350000,
-    imagen: "https://source.unsplash.com/800x600/?tayrona,beach,colombia",
+    imagen: "assets/img/tairona.png",
     descripcion: "Playas paradisíacas y selva tropical."
   },
   {
@@ -25,7 +25,7 @@ const DESTINOS = [
     nombre: "Desierto de la Tatacoa",
     ubicacion: "Huila",
     precio: 220000,
-    imagen: "https://source.unsplash.com/800x600/?tatacoa,desert,stars",
+    imagen: "assets/img/tatacoa.png",
     descripcion: "Paisajes únicos y noches estrelladas."
   },
   {
@@ -33,7 +33,7 @@ const DESTINOS = [
     nombre: "Sierra Nevada de Santa Marta",
     ubicacion: "Magdalena",
     precio: 400000,
-    imagen: "https://source.unsplash.com/800x600/?mountains,colombia",
+    imagen: "assets/img/sierra.png",
     descripcion: "Montañas sagradas con gran biodiversidad."
   },
   {
@@ -41,7 +41,7 @@ const DESTINOS = [
     nombre: "Santuario Los Flamencos",
     ubicacion: "La Guajira",
     precio: 250000,
-    imagen: "https://source.unsplash.com/800x600/?flamingos,lagoon",
+    imagen: "assets/img/flamencos.png",
     descripcion: "Avistamiento de flamencos en su hábitat natural."
   },
   {
@@ -49,7 +49,7 @@ const DESTINOS = [
     nombre: "Archipiélago de San Bernardo",
     ubicacion: "Bolívar",
     precio: 500000,
-    imagen: "https://source.unsplash.com/800x600/?caribbean,islands",
+    imagen: "assets/img/bernardo.png",
     descripcion: "Islas caribeñas con aguas cristalinas."
   },
   {
@@ -57,7 +57,7 @@ const DESTINOS = [
     nombre: "Mompox (Río Magdalena)",
     ubicacion: "Bolívar",
     precio: 300000,
-    imagen: "https://source.unsplash.com/800x600/?colonial,town,river",
+    imagen: "assets/img/magdalena.png",
     descripcion: "Pueblo colonial lleno de historia."
   },
   {
@@ -65,7 +65,7 @@ const DESTINOS = [
     nombre: "Valle del Cocora",
     ubicacion: "Quindío",
     precio: 200000,
-    imagen: "https://source.unsplash.com/800x600/?cocora,palm,forest",
+    imagen: "assets/img/cocora.png",
     descripcion: "Hogar de la palma de cera, árbol nacional."
   },
   {
@@ -73,7 +73,7 @@ const DESTINOS = [
     nombre: "PNN El Cocuy",
     ubicacion: "Boyacá",
     precio: 450000,
-    imagen: "https://source.unsplash.com/800x600/?snow,mountains,trekking",
+    imagen: "assets/img/cocuy.png",
     descripcion: "Nevados y senderismo de alta montaña."
   },
   {
@@ -81,7 +81,7 @@ const DESTINOS = [
     nombre: "Parque Arví",
     ubicacion: "Antioquia",
     precio: 120000,
-    imagen: "https://source.unsplash.com/800x600/?forest,park,trail",
+    imagen: "assets/img/arvi.png",
     descripcion: "Naturaleza cerca de Medellín."
   }
 ];
