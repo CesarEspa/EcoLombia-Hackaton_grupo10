@@ -46,15 +46,12 @@ function cargarCarrito() {
 cargarCarrito();
 
 //testing basico funcionalidad añadir
+//añadimos funcion para abrir modal con contenido del carrito.
 botonCarrito.addEventListener("click", () => {
+    renderCarrito();
 
-    const productoFake = {
-        id: 1,
-        nombre: "guatape",
-        precio: 100000
-    };
-
-    addtoCart(productoFake);
+    const modal = new bootstrap.Modal(document.getElementById('carritoModal'));
+    modal.show();
 });
 
 //probamos eliminar carrito
@@ -88,9 +85,11 @@ window.disminuirCantidad = disminuirCantidad;
 //renderizamos section con info del carrito
 function renderCarrito() {
     const contenedor = document.querySelector("#carrito-container");
+    const totalContainer = document.querySelector("#total-carrito")
 
     if (carrito.length === 0) {
         contenedor.innerHTML = `<p>El carrito esta vacio</p>`;
+        totalContainer.textContent = "Total: $0";
         return;
     }
 
@@ -104,4 +103,7 @@ function renderCarrito() {
             <button onclick="eliminarItem(${item.id})" class="btn btn-danger btn-sm">Eliminar</button>
         </div>
     `).join("");
+
+    const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+    totalContainer.textContent = `Total: $${total}`
 }
