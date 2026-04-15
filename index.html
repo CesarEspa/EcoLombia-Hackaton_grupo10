@@ -181,41 +181,102 @@
             </div>
         </section>
 
+        <!-- search container -->
         <div class="container">
-            <!-- hero -->
             <section>
-                  <div class="booking-bar-horizontal">
-                        <div class="booking-item">
-                              <label>Destino</label>
-                              <select id="destinoSelect" class="form-select">
-                                    <option value="">¿A dónde quieres ir?</option>
-                                  </select>
-                            </div>
-                        <div class="booking-item">
-                              <label>Check-in</label>
-                              <input type="date" class="form-control">
-                            </div>
-                        <div class="booking-item">
-                              <label>Check-out</label>
-                              <input type="date" class="form-control">
-                            </div>
-                        <div class="booking-item d-flex align-items-center">
-                              <button class="btn btn-success w-100" id="badge">
-                                    Buscar
-                                  </button>
-                            </div>
-                      </div>
+                <div class="booking-bar-horizontal">
+                    <div class="booking-item">
+                        <label>Destino</label>
+                        <select id="destinoSelect" class="form-select">
+                            <option value="">¿A dónde quieres ir?</option>
+                        </select>
+                    </div>
+                    <div class="booking-item">
+                        <label>Check-in</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="booking-item">
+                        <label>Check-out</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="booking-item d-flex align-items-center">
+                        <button class="btn btn-success w-100" id="badge">
+                            Buscar
+                        </button>
+                    </div>
+                </div>
             </section>
         </div>
-
-        
-
 
 
 
         <!-- lugares container -->
-        <section id="lugares__container" class="lugares__container">
+        <section id="lugares__container" class="lugares__container py-5">
+            <div class="container">
+                <!-- Título -->
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold text-uppercase display-5 mb-3 text-primary">
+                        Nuestros viajes
+                    </h2>
+                    <p class="lead">
+                        Escoge tu destino favorito <i class="bi bi-airplane"></i>
+                    </p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
 
+                    <div class="col">
+                        <div class="card ecotour-card text-center shadow h-100">
+                            <img class="card-img-top" src="img/destino1.jpg" alt="Destino 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Cañón del Río Claro</h5>
+                                <h6 class="card-subtitle mb-2 eco-text-muted">Antioquia</h6>
+                                <p class="card-text eco-text-muted small px-2 flex-grow-1">
+                                    Reserva natural perfecta para el rafting y la exploración. Disfruta de la naturaleza
+                                    en su estado más puro.
+                                </p>
+                                <div class="mb-3 mt-auto">
+                                    <a href="#" class="btn btn-eco-primary btn-sm">Ver Plan</a>
+                                    <a href="#" class="btn btn-eco-secondary btn-sm">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card ecotour-card text-center shadow h-100">
+                            <img class="card-img-top" src="assets/img/Rio-Claro-Antioquia.png" alt="Destino 2">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Parque Tayrona</h5>
+                                <h6 class="card-subtitle mb-2 eco-text-muted">Magdalena</h6>
+                                <p class="card-text eco-text-muted small px-2 flex-grow-1">
+                                    Donde la selva se encuentra con el Mar Caribe. Ideal para senderismo ecológico y
+                                    conexión cultural.
+                                </p>
+                                <div class="mb-3 mt-auto">
+                                    <a href="#" class="btn btn-eco-primary btn-sm">Ver Plan</a>
+                                    <a href="#" class="btn btn-eco-secondary btn-sm">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card ecotour-card text-center shadow h-100">
+                            <img class="card-img-top" src="img/destino3.jpg" alt="Destino 3">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Desierto de la Tatacoa</h5>
+                                <h6 class="card-subtitle mb-2 eco-text-muted">Huila</h6>
+                                <p class="card-text eco-text-muted small px-2 flex-grow-1">
+                                    Un bosque seco tropical espectacular. El mejor lugar de Colombia para la observación
+                                    astronómica.
+                                </p>
+                                <div class="mb-3 mt-auto">
+                                    <a href="#" class="btn btn-eco-primary btn-sm">Ver Plan</a>
+                                    <a href="#" class="btn btn-eco-secondary btn-sm">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- reseñas container -->
