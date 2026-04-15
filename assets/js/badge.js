@@ -1,4 +1,7 @@
 const botonCarrito = document.querySelector('#badge');
+const sidebar = document.querySelector('#carritoSidebar');
+const overlay = document.querySelector('#overlay');
+const cerrarBtn = document.querySelector('#cerrarSidebar')
 
 //inicializamos el carrito
 let carrito = [];
@@ -29,7 +32,6 @@ function actualizarBadge() {
 //funcion para guardar item en localstorage
 function guardarCarrito() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
-    console.log("Guardado:", carrito);
 }
 
 //funcion para cargar datos del carrito en localstorage
@@ -107,3 +109,19 @@ function renderCarrito() {
     const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
     totalContainer.textContent = `Total: $${total}`
 }
+
+//abrimos y cerramos badge con sidebar
+function abrirCarrito(){
+    sidebar.classList.add("open");
+    overlay.classList.add("show");
+    renderCarrito();
+}
+
+//Cerramos
+function cerrarCarrito() {
+    sidebar.classList.remove("open");
+    overlay.classList.remove("show")
+}
+
+botonCarrito.addEventListener("click", abrirCarrito);
+cerrarBtn.addEventListener("click", cerrarCarrito);

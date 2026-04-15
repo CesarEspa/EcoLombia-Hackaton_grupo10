@@ -115,29 +115,23 @@
         </div>
     </footer>
 
-    <!-- modal para carrito -->
+    <!-- sidebar para cargar contenido del carrito -->
 
-    <div class="modal fade" id="carritoModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
+    <div id="carritoSidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h5>Tu carrito</h5>
+            <button id="cerrarSidebar" class="btn btn-sm btn-danger">X</button>
+        </div>
 
-                <div class="modal-header">
-                    <h5 class="modal-title">Tu carrito</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
+        <div id="carrito-container" class="sidebar-body"></div>
 
-                <div class="modal-body" id="carrito-container">
-                    <!--renderizamos -->
-                </div>
-
-                <div class="modal-footer">
-                    <h6 id="total-carrito">Total: $0</h6>
-                    <button class="btn btn-success">Pagar</button>
-                </div>
-
-            </div>
+        <div class="sidebar-footer">
+            <h6 id="total-carrito">Total: $0</h6>
+            <button class="btn btn-success w-100">Pagar</button>
         </div>
     </div>
+
+    <div id="overlay"></div>
 
     <!-- boostrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
