@@ -1,86 +1,86 @@
 * {
-  font-family: 'Montserrat', Arial, sans-serif
+    font-family: 'Montserrat', Arial, sans-serif
 }
 
 :root {
-  /* Verdes base */
-  --color-primary: #697254;
-  --color-primary-light: #EBDDCD;
-  --color-primary-dark: #8C916C;
+    /* Verdes base */
+    --color-primary: #697254;
+    --color-primary-light: #EBDDCD;
+    --color-primary-dark: #8C916C;
 
-  /* Tonos tierra */
-  --color-secondary: #92735C;
-  --color-secondary-light: #B69C85;
+    /* Tonos tierra */
+    --color-secondary: #92735C;
+    --color-secondary-light: #B69C85;
 
-  /* tonos neutros */
-  --color-neutral: #DBD0C4;
+    /* tonos neutros */
+    --color-neutral: #DBD0C4;
 
-  /* ===== Extra (opcional para UI states) ===== */
-  --color-bg: #DBD0C4;
-  --color-text: #2c2c2c;
+    /* ===== Extra (opcional para UI states) ===== */
+    --color-bg: #DBD0C4;
+    --color-text: #2c2c2c;
 
-  /* Alerts */
-  --error: #FF3B3B;
-  --warning: #FFCC00;
-  --info: #0063F7;
-  --success: #06C270;
+    /* Alerts */
+    --error: #FF3B3B;
+    --warning: #FFCC00;
+    --info: #0063F7;
+    --success: #06C270;
 }
 
 .bg-body-tertiary {
-  background-color: #E9DBCB !important;
+    background-color: #E9DBCB !important;
 }
 
 .footer-container {
-  align-self: end;
-  width: 100%;
-  height: 10%;
-  background-color: #997373;
+    align-self: end;
+    width: 100%;
+    height: 10%;
+    background-color: #997373;
 }
 
 .footer-clean {
-background-color: #EBDDCD;
-color: #555;
+    background-color: #EBDDCD;
+    color: #555;
 }
 
 .logo {
-font-size: 2rem;
+    font-size: 2rem;
 
 }
 
 .footer-social {
-display: flex;
+    display: flex;
 
-/* background-color: red; */
-.bi {
-    font-size: 1.5rem;
-    color: #555;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
+    /* background-color: red; */
+    .bi {
+        font-size: 1.5rem;
+        color: #555;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+    }
 }
 
 
 .footer-text {
-font-size: 0.9rem;
-margin: 15px 0;
+    font-size: 0.9rem;
+    margin: 15px 0;
 }
 
 
 .footer-title {
-font-weight: 600;
-font-size: 0.9rem;
-color: #000;
-margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #000;
+    margin-bottom: 10px;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
-  flex: 1;
+    flex: 1;
 }
 /*Sidebar para carrito*/
 .sidebar {
@@ -127,4 +127,161 @@ main {
 /* ocultar hasta hacer click */
 #overlay.show {
   display: block;
+}
+
+.btn-outline-success {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-outline-success:hover {
+    color: var(--color-neutral);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-outline-success:active {
+    color: var(--color-neutral) !important;
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+/* resenas container */
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.text-secondary {
+    color: var(--color-secondary) !important;
+}
+
+
+.bg-primary-light {
+    background-color: var(--color-primary-light) !important;
+}
+
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+/* Avatar */
+.avatar-circle {
+    width: 60px;
+    height: 60px;
+}
+
+
+/* ===== HERO HORIZONTAL ===== */
+.hero__container {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* BARRA HORIZONTAL */
+.booking-bar-horizontal {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px 25px;
+    border-radius: 15px;
+    /* 🔥 gris transparente */
+    background: rgba(200, 200, 200, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ITEMS */
+.booking-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* LABELS */
+.booking-item label {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+/* INPUTS */
+.booking-item input,
+.booking-item select {
+    border-radius: 8px;
+    padding: 8px;
+}
+
+/* BOTÓN */
+.booking-item button {
+    height: 38px;
+    border-radius: 8px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .booking-bar-horizontal {
+        flex-direction: column;
+        align-items: stretch
+    }
+}
+
+
+.lugares__container {
+    background-color: white;
+}
+.ecotour-card {
+    background-color: var(--color-primary-dark); 
+    border: none;
+    border-radius: 20px; 
+    padding: 15px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.ecotour-card img {
+    border-radius: 10px; 
+    height: 220px;
+    object-fit: cover; 
+    width: 100%;
+}
+.ecotour-card .card-body {
+    background-color: var(--color-bg); /* Fondo en contraste dentro de la card */
+    border-radius: 10px;
+    margin-top: 15px;
+    color: var(--color-text);
+}
+.ecotour-card .card-title {
+    color: var(--color-text);
+}
+.eco-text-muted {
+    color: black;
+}
+
+.ecotour-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(105, 114, 84, 0.4) !important; 
+    z-index: 1;
+}
+.btn-eco-primary {
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+}
+.btn-eco-primary:hover {
+    background-color: var(--color-secondary-light);
+    color: white;
+}
+.btn-eco-secondary {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    border: none;
+    font-weight: 600;
+}
+.btn-eco-secondary:hover {
+    background-color: var(--color-primary-dark);
+    color: white;
 }
