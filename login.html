@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLombia</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="card">
+        <h1 class="main-title">ecoLombia</h1>
+
+        <div class="card-bg card-bg-1 signin"></div>
+        <div class="card-bg card-bg-2 signin"></div>
+
+        <img src="assets/img/logo.png" class="logo logo-1 signin" alt="Logo">
+        <img src="assets/img/logo.png" class="logo logo-2 signin" alt="Logo">
+
+        <div class="form signin active">
+            <form onsubmit="event.preventDefault();">
+                <h2>Iniciar sesión</h2>
+                <input type="email" placeholder="Correo electrónico">
+                <input type="password" placeholder="Contraseña">
+                <button type="button" onclick="ingresarAlSistema()">INICIAR SESIÓN</button>
+                <p>¿No tienes cuenta? <em onclick="toggleView()">Registrarse</em></p>
+            </form>
+        </div>
+
+        <div class="form signup">
+            <form onsubmit="event.preventDefault();">
+                <h2>Registrarse</h2>
+                <input type="text" placeholder="Nombre">
+                <input type="email" placeholder="Correo electrónico">
+                <input type="password" placeholder="Contraseña">
+                <button type="submit">REGISTRARSE</button>
+                <p>¿Ya tienes cuenta? <em onclick="toggleView()">Iniciar sesión</em></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>

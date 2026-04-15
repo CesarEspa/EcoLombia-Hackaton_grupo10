@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+:root {
+    --color-primary: #697254;
+    --color-primary-light: #EBDDCD;
+    --color-primary-dark: #8C916C;
+    --color-secondary: #92735C;
+    --color-secondary-light: #B69C85;
+    --color-neutral: #DBD0C4;
+    --color-bg: #DBD0C4;
+    --color-text: #2c2c2c;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--color-bg);
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    width: 800px;
+    height: 500px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- TÍTULO ECOLOMBIA FIJO ARRIBA --- */
+.main-title {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    pointer-events: none;
+    /* Sombra para que se lea bien sobre el verde y el blanco */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* --- ANIMACIÓN DE FONDOS SIMÉTRICA --- */
+.card-bg {
+    position: absolute;
+    z-index: 2;
+    top: -50%;
+    left: -25%;
+    width: 150%;
+    height: 200%;
+    background-color: var(--color-primary);
+    transition: all 0.7s ease-in-out;
+}
+
+.card-bg-1.signin, .card-bg-2.signin {
+    transform: translateX(65%) rotate(-15deg); 
+}
+
+.card-bg-1.signup, .card-bg-2.signup {
+    transform: translateX(-65%) rotate(15deg); 
+}
+
+/* --- LOGOS MÁS GRANDES --- */
+.logo {
+    position: absolute;
+    top: 70px;
+    z-index: 4;
+    height: 100px; /* Tamaño ajustado para ser más grande */
+    transition: all 0.7s ease-in-out;
+}
+
+.logo-1.signin { right: 40px; opacity: 1; }
+.logo-1.signup { right: -200px; opacity: 0; }
+
+.logo-2.signin { left: -200px; opacity: 0; }
+.logo-2.signup { left: 40px; opacity: 1; }
+
+/* --- FORMULARIOS --- */
+.form {
+    position: absolute;
+    z-index: 3;
+    top: 40px;
+    bottom: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+    transition: all 0.7s ease-in-out;
+}
+
+.form.signin { left: 0; }
+.form.signup { right: 0; }
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s ease-in-out;
+}
+
+.form.active form {
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: 0.3s;
+}
+
+.form h2 {
+    color: var(--color-primary);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-neutral);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    outline: none;
+    font-size: 14px;
+}
+
+.form input:focus {
+    border-color: var(--color-primary);
+}
+
+.form button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.form button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.form p {
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-text);
+    margin-top: 15px;
+}
+
+.form p em {
+    color: var(--color-secondary);
+    font-style: normal;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+}
