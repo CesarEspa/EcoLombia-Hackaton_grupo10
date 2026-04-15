@@ -19,6 +19,7 @@
         rel="stylesheet">
     <!-- Estilos genéricos -->
     <link rel="stylesheet" href="assets/css/reset.css">
+    
     <!-- Estilos específicos  -->
     <link rel="stylesheet" href="assets/css/app.css">
 </head>
@@ -57,14 +58,37 @@
     <main>
 
         <!-- hero -->
-        <section class="hero__container">
+<section class="hero__container">
 
-        </section>
+    <div class="booking-bar-horizontal">
 
-        <!-- search container -->
-        <section class="search__container">
+        <div class="booking-item">
+            <label>Destino</label>
+            <select id="destinoSelect" class="form-select">
+                <option value="">¿A dónde quieres ir?</option>
+            </select>
+        </div>
 
-        </section>
+        <div class="booking-item">
+            <label>Check-in</label>
+            <input type="date" class="form-control">
+        </div>
+
+        <div class="booking-item">
+            <label>Check-out</label>
+            <input type="date" class="form-control">
+        </div>
+
+        <div class="booking-item d-flex align-items-end">
+            <button class="btn btn-success w-100" id="badge">
+                Añadir al carrito
+            </button>
+        </div>
+
+    </div>
+
+</section>
+       
 
         <!-- lugares container -->
         <section class="lugares__container">
@@ -123,6 +147,8 @@
     <script src="assets/js/main.js"></script>
     <!-- js específico -->
     <script src="assets/js/app.js"></script>
+
+
 </body>
 
 </html>
