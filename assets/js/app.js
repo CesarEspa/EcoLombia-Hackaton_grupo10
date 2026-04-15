@@ -108,11 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const id = e.target.value;
 
     const destinoSeleccionado = DESTINOS.find(d => d.id == id);
-
-    console.log("Seleccionado:", destinoSeleccionado);
-
-    // prueba visual rápida
-    alert(`Seleccionaste: ${destinoSeleccionado.nombre}`);
+   
   });
 
 });
@@ -121,7 +117,7 @@ function renderDestinos() {
     const container = document.querySelector("#cards-container");
 
     container.innerHTML = DESTINOS.map(destino => `
-        <div class="col">
+        <div class="col" data-aos="fade-up">
             <div class="card ecotour-card text-center shadow h-100">
                 
                 <img class="card-img-top" src="${destino.imagen}" alt="${destino.nombre}">

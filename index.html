@@ -48,7 +48,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#lugares__container">
+                            <a class="nav-link" href="#lugares_container">
                                 <i class="bi bi-geo-alt me-1"></i>Destinos
                             </a>
                         </li>
@@ -70,7 +70,7 @@
     <main>
 
         <!-- hero -->
-        <section class="container-fluid p-0">
+        <section class="container-fluid p-0" data-aos="fade-up">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 
                 <!-- Indicadores -->
@@ -104,7 +104,7 @@
                                     </p>
 
                                     <div class="mt-2">
-                                        <a href="#lugares__container" class="btn btn-lg px-4 text-white hero-btn">
+                                        <a href="#lugares_container" class="btn btn-lg px-4 text-white hero-btn">
                                             Explorar
                                         </a>
                                     </div>
@@ -187,7 +187,7 @@
 
         <!-- search container -->
         <div class="container">
-            <section>
+            <section data-aos="fade-up">
                 <div class="booking-bar-horizontal">
                     <div class="booking-item">
                         <label>Destino</label>
@@ -216,7 +216,7 @@
 
         <!-- lugares container -->
         <section id="lugares_container" class="lugares__container py-5">
-            <div class="container">
+            <div class="container" data-aos="fade-up">
                 <!-- Título -->
                 <div class="text-center mb-5">
                     <h2 class="fw-bold text-uppercase display-5 mb-3 text-primary">
@@ -235,7 +235,7 @@
 
         <!-- reseñas container -->
         <section id="resenas__container" class="resenas__container py-5 bg-neutral">
-            <div class="container">
+            <div class="container" data-aos="fade-up">
 
                 <!-- Título -->
                 <div class="text-center mb-5">
@@ -251,7 +251,7 @@
                 <div class="row g-4">
 
                     <!-- Reseña 1 -->
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up-right">
                         <div class="card h-100 border-0 shadow-sm bg-primary-light">
                             <div class="card-body p-4">
                                 <div class="d-flex align-items-center mb-3">
@@ -284,8 +284,8 @@
                     </div>
 
                     <!-- Reseña 2 -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100 border-0 shadow-sm bg-primary-light">
+                    <div class="col-12 col-md-6 col-lg-4" >
+                        <div class="card h-100 border-0 shadow-sm bg-primary-light" data-aos="fade-up-left">
                             <div class="card-body p-4">
                                 <div class="d-flex align-items-center mb-3">
                                     <div
@@ -318,7 +318,7 @@
 
                     <!-- Reseña 3 -->
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100 border-0 shadow-sm bg-primary-light">
+                        <div class="card h-100 border-0 shadow-sm bg-primary-light" data-aos="fade-up-right">
                             <div class="card-body p-4">
                                 <div class="d-flex align-items-center mb-3">
                                     <div
@@ -354,10 +354,8 @@
             </div>
         </section>
 
-        <section class="checkout__container">
-
-        </section>
     </main>
+
     <footer class="footer-clean py-5">
         <div class="container">
             <div class="row align-items-start">
@@ -420,14 +418,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>        
     <!-- js principal -->
     <script src="assets/js/main.js"></script>
     <!-- js específico -->
     <script src="assets/js/app.js"></script>
     <!-- carrito -->
     <script src="assets/js/badge.js"></script>
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 
