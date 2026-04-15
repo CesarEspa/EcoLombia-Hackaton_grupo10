@@ -1,6 +1,6 @@
 const botonCarrito = document.querySelector('#badge');
 const sidebar = document.querySelector('#carritoSidebar');
-const overlay = document.querySelector('#overlay');
+const overlay = document.querySelector('#overlay-carrito');
 const cerrarBtn = document.querySelector('#cerrarSidebar')
 
 //inicializamos el carrito

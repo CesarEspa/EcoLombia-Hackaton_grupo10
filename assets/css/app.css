@@ -114,7 +114,7 @@ main {
 }
 
 /* overlay oscuro */
-#overlay {
+#overlay-carrito {
   position: fixed;
   top: 0;
   left: 0;
@@ -125,7 +125,7 @@ main {
   z-index: 1040;
 }
 /* ocultar hasta hacer click */
-#overlay.show {
+#overlay-carrito .show {
   display: block;
 }
 
