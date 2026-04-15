@@ -84,6 +84,9 @@ function disminuirCantidad(id) {
 }
 window.disminuirCantidad = disminuirCantidad;
 
+function formatearPrecio(valor) {
+    return `$${valor.toLocaleString('es-CO')}`;
+}
 //renderizamos section con info del carrito
 function renderCarrito() {
     const contenedor = document.querySelector("#carrito-container");
@@ -98,7 +101,7 @@ function renderCarrito() {
     contenedor.innerHTML = carrito.map(item => `
         <div class="card mb-2 p-2">
             <h5>${item.nombre}</h5>
-            <p>Precio: $${item.precio}</p>
+            <p>Precio: ${formatearPrecio(item.precio)}</p>
             <p>Cantidad: ${item.cantidad}</p>
 
             <button onclick="disminuirCantidad(${item.id})" class="btn btn-warning btn-sm">-</button>
@@ -107,7 +110,7 @@ function renderCarrito() {
     `).join("");
 
     const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
-    totalContainer.textContent = `Total: $${total}`
+    totalContainer.textContent = `Total: ${formatearPrecio(total)}`
 }
 
 //abrimos y cerramos badge con sidebar

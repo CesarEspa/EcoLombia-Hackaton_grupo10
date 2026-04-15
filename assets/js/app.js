@@ -136,13 +136,13 @@ function renderDestinos() {
                         ${destino.descripcion}
                     </p>
 
-                    <p class="fw-bold text-success">$${destino.precio}</p>
+                    <p class="fw-bold text-success">$${destino.precio.toLocaleString('es-CO')}</p>
 
                     <div class="mb-3 mt-auto">
                         <button class="btn btn-eco-primary btn-sm">Ver Plan</button>
                         <button 
                             class="btn btn-eco-secondary btn-sm"
-                            onclick="agregarDestino(${destino.id})"
+                            onclick="agregarDestinos(${destino.id})"
                         >
                             Reservar
                         </button>
@@ -154,13 +154,14 @@ function renderDestinos() {
 }
 renderDestinos();
 
-// function agregarDestinos() {
-//     const destino = DESTINOS.find(d => d.id === id);
-//     if(!destino) return;
+ function agregarDestinos(id) {
+     const destino = DESTINOS.find(d => d.id === id);
+     if(!destino) return;
 
-//     addtoCart(destino);
-// }
-// //agregamos la funcion al scope.
-// window.agregarDestinos = agregarDestinos;
+     addtoCart(destino);
+ }
+//agregamos la funcion al scope.
+ window.agregarDestinos = agregarDestinos;
 
-// //init
+// init
+renderDestinos();
