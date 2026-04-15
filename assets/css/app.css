@@ -1,5 +1,5 @@
 * {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif
 }
 
 :root {
@@ -27,7 +27,7 @@
 }
 
 .bg-body-tertiary {
-  background-color: var(--color-primary-light) !important;
+  background-color: #E9DBCB !important;
 }
 
 .footer-container {
@@ -37,42 +37,41 @@
   background-color: #997373;
 }
 
-  .footer-clean {
-    background-color: #EBDDCD;
+.footer-clean {
+background-color: #EBDDCD;
+color: #555;
+}
+
+.logo {
+font-size: 2rem;
+
+}
+
+.footer-social {
+display: flex;
+
+/* background-color: red; */
+.bi {
+    font-size: 1.5rem;
     color: #555;
-  }
-
-  .logo {
-    font-family: cursive;
-    font-size: 2rem;
-    color: #2f4f4f;
-  }
-
-  .footer-social {
-    display: flex;
-
-    /* background-color: red; */
-    .bi {
-      font-size: 1.5rem;
-      color: #555;
-      margin: 0 10px;
-      transition: color 0.3s ease;
-    }
-  }
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+}
 
 
-  .footer-text {
-    font-size: 0.9rem;
-    margin: 15px 0;
-  }
+.footer-text {
+font-size: 0.9rem;
+margin: 15px 0;
+}
 
 
-  .footer-title {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #000;
-    margin-bottom: 10px;
-  }
+.footer-title {
+font-weight: 600;
+font-size: 0.9rem;
+color: #000;
+margin-bottom: 10px;
+}
 
 body {
   display: flex;
