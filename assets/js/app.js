@@ -1,6 +1,4 @@
-function navbar () {
-    
-}
+ AOS.init();
 
 // datos de destinos
 const DESTINOS = [
@@ -118,7 +116,7 @@ function renderDestinos() {
     const container = document.querySelector("#cards-container");
 
     container.innerHTML = DESTINOS.map(destino => `
-        <div class="col">
+        <div class="col" data-aos="fade-up">
             <div class="card ecotour-card text-center shadow h-100">
                 
                 <img class="card-img-top" src="${destino.imagen}" alt="${destino.nombre}">
