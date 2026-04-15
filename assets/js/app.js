@@ -2,6 +2,18 @@ AOS.init();
 const btnBuscar = document.querySelector('#btnBuscar');
 const selectDestino = document.querySelector('#destinoSelect');
 
+function showAlert({ type, message }) {
+    Swal.fire({
+        toast: true,
+        position: 'top',
+        icon: type,
+        title: message,
+        showConfirmButton: false,
+        timer: 4000,
+        timerProgressBar: true
+    });
+}
+
 // Evento click del botón Buscar
 btnBuscar.addEventListener('click', () => {
     const idSeleccionado = selectDestino.value;
@@ -189,7 +201,12 @@ function agregarDestinos(id) {
     const destino = DESTINOS.find(d => d.id === id);
     if (!destino) return;
     addtoCart(destino);
+      showAlert({
+      type: 'success',
+      message: `Destino agregado`
+  });
 }
+
 //agregamos la funcion al scope.
  window.agregarDestinos = agregarDestinos;
 

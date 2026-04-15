@@ -3,6 +3,17 @@ const sidebar = document.querySelector('#carritoSidebar');
 const overlay = document.querySelector('#overlay-carrito');
 const cerrarBtn = document.querySelector('#cerrarSidebar')
 
+function showAlert({ type, message }) {
+    Swal.fire({
+        toast: true,
+        position: 'top',
+        icon: type,
+        title: message,
+        showConfirmButton: false,
+        timer: 4000,
+        timerProgressBar: true
+    });
+}
 //inicializamos el carrito
 let carrito = [];
 
@@ -63,6 +74,11 @@ function eliminarItem(id) {
     actualizarBadge();
     guardarCarrito();
     renderCarrito();
+
+    showAlert({
+    type: 'error',
+    message: `Destino eliminado`
+});
 }
 
 //funcion para disminuir cantidad de items en el carrito
